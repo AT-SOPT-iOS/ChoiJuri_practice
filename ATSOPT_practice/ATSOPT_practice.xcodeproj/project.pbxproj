@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L9J3VF6GK2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ATSOPT_practice/Info.plist;
+				INFOPLIST_FILE = ATSOPT_practice/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -178,7 +178,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L9J3VF6GK2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ATSOPT_practice/Info.plist;
+				INFOPLIST_FILE = ATSOPT_practice/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
