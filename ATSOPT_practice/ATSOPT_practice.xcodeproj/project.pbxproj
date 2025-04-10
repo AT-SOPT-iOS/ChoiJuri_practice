@@ -14,7 +14,7 @@
 		CB861F422DA0E5CE006B15B1 /* Exceptions for "ATSOPT_practice" folder in "ATSOPT_practice" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resource/Info.plist,
 			);
 			target = CB861F2F2DA0E5CD006B15B1 /* ATSOPT_practice */;
 		};
