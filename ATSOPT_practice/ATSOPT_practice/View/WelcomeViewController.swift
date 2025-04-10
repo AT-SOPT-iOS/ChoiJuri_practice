@@ -24,7 +24,7 @@ final class WelcomeViewController: UIViewController {
         label.text = "???님\n반가워요!"
         label.numberOfLines = 2
         label.textAlignment = .center
-        label.font = .boldSystemFont(ofSize: 25)
+        label.font = .head1
         
         return label
     }()
@@ -34,17 +34,17 @@ final class WelcomeViewController: UIViewController {
         button.backgroundColor = .accent
         button.setTitle("메인으로", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
+        button.titleLabel?.font = .subhead1
         button.addTarget(self, action: #selector(backButtonDidTapped), for: .touchUpInside)
         return button
     }()
     
     private lazy var reLoginButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 35, y: 498, width: 332, height: 58))
-        button.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+        button.backgroundColor = .gray200
         button.setTitle("다시 로그인", for: .normal)
-        button.setTitleColor(.gray, for: .normal)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
+        button.setTitleColor(.gray400, for: .normal)
+        button.titleLabel?.font = .subhead1
         button.addTarget(self, action: #selector(backButtonDidTapped), for: .touchUpInside)
         return button
     }()
