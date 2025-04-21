@@ -28,7 +28,8 @@ extension UIFont {
         return customFont
     }
     
-    @nonobjc class var head1: UIFont {
+    
+    class var head1: UIFont {
         return UIFont.font(.pretendardBold, ofSize: 25)
     }
     

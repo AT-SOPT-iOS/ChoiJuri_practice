@@ -83,6 +83,6 @@ final class WelcomeViewController: UIViewController {
     }
 }
 
-#Preview(traits: .portrait, body: {
+#Preview{
     WelcomeViewController()
-})
+}
