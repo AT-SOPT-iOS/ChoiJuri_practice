@@ -12,7 +12,7 @@ final class WelcomeViewController: UIViewController {
     var id: String? = ""
     
     private let imageView: UIImageView  = {
-        let image = UIImage(resource: .profile)
+        let image = UIImage(resource: .profileCarrot)
         let imageView = UIImageView(frame: CGRect(x: 112, y: 87, width: 150, height: 150))
         imageView.image = image
         
