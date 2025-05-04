@@ -89,7 +89,7 @@ final class LoginViewController_Delegate: UIViewController, DataBindDelegate {
 }
 
 #Preview(traits: .portrait, body: {
-    let navigationController = UINavigationController(rootViewController: LoginViewController())
+    let navigationController = UINavigationController(rootViewController: LoginViewController_Server())
     navigationController
 })
 
