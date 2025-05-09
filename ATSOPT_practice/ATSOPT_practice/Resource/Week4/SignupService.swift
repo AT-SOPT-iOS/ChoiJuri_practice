@@ -73,8 +73,4 @@ final class SignupService {
             throw NetworkError.responseDecodingError
         }
     }
-    
-    private func configureHTTPError(errorCode: Int) -> Error {
-        return NetworkError(rawValue: errorCode) ?? NetworkError.unknownError
-    }
 }

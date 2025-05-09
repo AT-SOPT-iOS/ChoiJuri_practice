@@ -57,6 +57,35 @@ final class LoginViewController_Server: UIViewController {
             }
         }
     
+    @objc private func loginButtonTap() {
+            Task {
+                do {
+                    let response = try await LoginService.shared.login(userID: self.loginId, password: self.password)
+                
+                    let alert = UIAlertController(
+                        title: "로그인 성공",
+                        message: "ID: \(response) ",
+                        preferredStyle: .alert
+                    )
+                    
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true)
+                } catch {
+                    let alert = UIAlertController(
+                        title: "로그인 실패",
+                        message: error.localizedDescription,
+                        preferredStyle: .alert
+                    )
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true)
+                    
+                    print("로그인 에러:", error)
+                }
+            }
+        }
+    
     
     @objc private func textFieldDidEditing(_ textField: UITextField) {
         switch textField {
@@ -75,10 +104,10 @@ final class LoginViewController_Server: UIViewController {
         
         stackView.snp.makeConstraints {
             $0.leading.trailing.equalTo(self.view.safeAreaLayoutGuide).inset(40)
-            $0.top.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(200)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide).inset(200)
         }
         
-        [idTextField, passwordTextField, nickNameTextField, registerButton, infoViewButton].forEach {
+        [idTextField, passwordTextField, nickNameTextField, registerButton, infoViewButton, loginButton].forEach {
             self.stackView.addArrangedSubview($0)
         }
     }
@@ -126,5 +155,12 @@ final class LoginViewController_Server: UIViewController {
         $0.backgroundColor = .blue
         $0.setTitle("회원정보 조회", for: .normal)
         $0.titleLabel?.textColor = .white
+    }
+    
+    private lazy var loginButton = UIButton().then {
+        $0.backgroundColor = .blue
+        $0.setTitle("로그인", for: .normal)
+        $0.titleLabel?.textColor = .white
+        $0.addTarget(self, action: #selector(loginButtonTap), for: .touchUpInside)
     }
 }

@@ -29,3 +29,7 @@ enum NetworkError: Int, Error {
         }
     }
 }
+
+func configureHTTPError(errorCode: Int) -> Error {
+    return NetworkError(rawValue: errorCode) ?? NetworkError.unknownError
+}
