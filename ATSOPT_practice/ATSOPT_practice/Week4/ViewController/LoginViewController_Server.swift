@@ -62,15 +62,12 @@ final class LoginViewController_Server: UIViewController {
                 do {
                     let response = try await LoginService.shared.login(userID: self.loginId, password: self.password)
                 
-                    let alert = UIAlertController(
-                        title: "로그인 성공",
-                        message: "ID: \(response) ",
-                        preferredStyle: .alert
-                    )
+                    let viewController = UpdateNicknameViewController(userId: response)
                     
-                    let okAction = UIAlertAction(title: "확인", style: .default)
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true)
+                    viewController.navigationItem.hidesBackButton = true
+                    
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                    
                 } catch {
                     let alert = UIAlertController(
                         title: "로그인 실패",

@@ -16,7 +16,7 @@ final class InfoViewController: UIViewController {
     // MARK: - Properties
 
     private var keyword: String = ""
-    private let userId: Int = 1 // 실제 로그인된 사용자 ID로 교체 필요
+    private var userId: Int = 1 // 실제 로그인된 사용자 ID로 교체 필요
 
     // MARK: - Lifecycle
 
