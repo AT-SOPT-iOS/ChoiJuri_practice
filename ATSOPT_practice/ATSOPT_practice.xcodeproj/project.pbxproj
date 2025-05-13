@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CB2EBEB92DBCA677002F76C6 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CB2EBEB82DBCA677002F76C6 /* Then */; };
+		CB2EBEBC2DBCA681002F76C6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB2EBEBB2DBCA681002F76C6 /* SnapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CB861F302DA0E5CD006B15B1 /* ATSOPT_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATSOPT_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -14,7 +19,7 @@
 		CB861F422DA0E5CE006B15B1 /* Exceptions for "ATSOPT_practice" folder in "ATSOPT_practice" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resource/Info.plist,
 			);
 			target = CB861F2F2DA0E5CD006B15B1 /* ATSOPT_practice */;
 		};
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2EBEB92DBCA677002F76C6 /* Then in Frameworks */,
+				CB2EBEBC2DBCA681002F76C6 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = ATSOPT_practice;
 			packageProductDependencies = (
+				CB2EBEB82DBCA677002F76C6 /* Then */,
+				CB2EBEBB2DBCA681002F76C6 /* SnapKit */,
 			);
 			productName = ATSOPT_practice;
 			productReference = CB861F302DA0E5CD006B15B1 /* ATSOPT_practice.app */;
@@ -107,6 +116,10 @@
 			);
 			mainGroup = CB861F272DA0E5CD006B15B1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CB2EBEB72DBCA677002F76C6 /* XCRemoteSwiftPackageReference "Then" */,
+				CB2EBEBA2DBCA681002F76C6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CB861F312DA0E5CD006B15B1 /* Products */;
 			projectDirPath = "";
@@ -147,7 +160,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L9J3VF6GK2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ATSOPT_practice/Info.plist;
+				INFOPLIST_FILE = ATSOPT_practice/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -178,7 +191,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L9J3VF6GK2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ATSOPT_practice/Info.plist;
+				INFOPLIST_FILE = ATSOPT_practice/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -341,6 +354,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB2EBEB72DBCA677002F76C6 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		CB2EBEBA2DBCA681002F76C6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB2EBEB82DBCA677002F76C6 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2EBEB72DBCA677002F76C6 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		CB2EBEBB2DBCA681002F76C6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB2EBEBA2DBCA681002F76C6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB861F282DA0E5CD006B15B1 /* Project object */;
 }
